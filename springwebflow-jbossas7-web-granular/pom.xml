@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>springwebflow-optforrepl-samples</artifactId>
+		<groupId>com.github.gfernandez598</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>springwebflow-jbossas7-web-granular</artifactId>
+	<packaging>war</packaging>
+	<name>springwebflow-jbossas7-web-granular Webapp</name>
+	<description>Spring Web Flow improved to support granular session replication on Jboss AS 7.1</description>
+	<url>https://github.com/gfernandez598/springwebflow-optforrepl-samples</url>
+
+	<properties>
+		<version.jdk>1.6</version.jdk>
+		<version.springwebflow-optforrepl>1.0</version.springwebflow-optforrepl>
+		<version.javax-servlet-api>3.0.1</version.javax-servlet-api>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>${version.javax-servlet-api}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.gfernandez598</groupId>
+			<artifactId>springwebflow-optforrepl</artifactId>
+			<version>${version.springwebflow-optforrepl}</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<finalName>${project.artifactId}</finalName>
+
+		<plugins>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>${version.jdk}</source>
+					<target>${version.jdk}</target>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+			</plugin>
+
+		</plugins>
+
+	</build>
+
+</project>

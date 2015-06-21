@@ -1,0 +1,44 @@
+<!--
+  #%L
+  springwebflow-jbossas7-web-granular Webapp
+  %%
+  Copyright (C) 2015 gfernandez598
+  %%
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+       http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  #L%
+  -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Spring Web Flow improved to support granular session replication on Jboss AS 7.1</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+	<h1>Hello!</h1>
+	<h2>SWF over EE6 web app for Jboss AS 7.1</h2>
+	<p>This is a Spring Web Flow application that use
+		springwebflow-optforrepl to take advantage of Jboss AS facility for
+		session replication granularity.</p>
+	<h2>Usage</h2>
+	<p>
+		Every time you click the link below, it will open a simple page in
+		other tab creating a new flow execution per tab.<br />In a cluster
+		environment only the session information related to the specific
+		execution will be replicated. 
+	</p>
+	<ul>
+		<li><strong>New simple flow</strong> <a href="flow/simple"
+			target="_blank">/flow/simple</a></li>
+	</ul>
+</body>
+</html>
